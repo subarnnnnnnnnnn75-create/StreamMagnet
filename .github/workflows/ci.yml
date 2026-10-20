@@ -5,6 +5,7 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+  workflow_dispatch:
 
 jobs:
   analyze_and_test:
@@ -42,5 +43,5 @@ jobs:
       - name: Upload Debug APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: stream-magnet-debug-apk
+          name: StreamMagnet-Debug-APK
           path: build/app/outputs/flutter-apk/app-debug.apk
